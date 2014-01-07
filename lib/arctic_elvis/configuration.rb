@@ -17,5 +17,9 @@ module ArcticElvis
     def configure
       yield self
     end
+
+    def options
+      Hash[ * VALID_CONFIG_KEYS.map { |key| [key, send(key)] }.flatten ]
+    end
   end
 end
