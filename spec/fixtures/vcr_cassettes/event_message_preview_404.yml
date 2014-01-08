@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.arcticelvis.com/api/v2/events/1/event_messages/2/preview.json
+    body:
+      encoding: UTF-8
+      string: '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token=cd242fb288ddf6e501decb92b84ac0a4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 08 Jan 2014 21:29:15 GMT
+      Status:
+      - 404 Not Found
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 4b7d04388d16f356d9b82acedaad77d6
+      X-Runtime:
+      - '0.114215'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":{"id":404,"message":"Could not find event with id 1"}}'
+    http_version: 
+  recorded_at: Wed, 08 Jan 2014 21:29:15 GMT
+recorded_with: VCR 2.8.0

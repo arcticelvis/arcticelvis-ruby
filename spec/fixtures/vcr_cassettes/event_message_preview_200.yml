@@ -1,0 +1,170 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.arcticelvis.com/api/v2/events/177/event_messages/235/preview.json
+    body:
+      encoding: UTF-8
+      string: '{"payload":{"name":"Surly you have a name mister!"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token=cd242fb288ddf6e501decb92b84ac0a4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 08 Jan 2014 21:39:56 GMT
+      Etag:
+      - '"3c093cb355b77b5ce74223dafad4ef78"'
+      Location:
+      - /api/v2/events.177
+      Status:
+      - 201 Created
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 0bf86190274968c1af80bfd5465f083d
+      X-Runtime:
+      - '0.291256'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"event_message":{"id":235,"subject":"Welcome","created_at":"2014-01-08T19:00:02Z","updated_at":"2014-01-08T20:50:54Z","state":"active","preview":"<!DOCTYPE
+        HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n      <html>\n        <head>\n          <meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n          <meta
+        name=\"viewport\" content=\"width=device-width\" />\n          <meta charset=\"utf-8\">\n          <title></title>\n        </head>\n        <body>\n          <style
+        type=\"text/css\">\n            /* Client-specific Styles */\n            #outlook
+        a {padding:0;} /* Force Outlook to provide a \"view in browser\" menu link.
+        */\n            body{width:100% !important; -webkit-text-size-adjust:100%;
+        -ms-text-size-adjust:100%; margin:0; padding:0;} \n            /* Prevent
+        Webkit and Windows Mobile platforms from changing default font sizes.*/ \n            .ExternalClass
+        {width:100%;} /* Force Hotmail to display emails at full width */  \n            .ExternalClass,
+        .ExternalClass span, .ExternalClass td, .ExternalClass * {line-height: 100%;}\n            /*
+        Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/
+        */ \n            #backgroundTable {margin:0; padding:0; width:100% !important;
+        line-height: 100% !important;}\n            /* End reset */\n            /*
+        Some sensible defaults for images, Bring inline: Yes. */\n            img
+        {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} \n            a
+        img {border:none;} \n            .image_fix {display:block;}\n            /*
+        Outlook 07, 10 Padding issue fix, Bring inline: No.*/\n            table td
+        {border-collapse: collapse;}\n            @media only screen and (max-width:
+        620px) {\n              .inner-wrapper{width: 320px;}\n              .collaps-on-phone,
+        td.collaps-on-phone{width: 0px; height: 0px; display:none;}\n            }\n            @-webkit-viewport{width:device-width}\n            @-moz-viewport{width:device-width}\n            @-ms-viewport{width:device-width}\n            @-o-viewport{width:device-width}\n            @viewport{width:device-width}\n\n          </style>\n        <style
+        type=\"text/css\">table#nl_background {font-family:Arial, Helvetica, sans-serif;
+        font-size:12px; margin:0px;background:#e7e8e8;}\r\ntable#nl_content {font-family:Arial,
+        Helvetica, sans-serif; font-size:12px; margin:0px;background:#fff;}\r\nh1
+        { !important; margin: 0px; font-weight: normal; font-size: 26px; line-height:26px;
+        font-family: arial,verdana,helvetica; color:#000000;text-decoration:none;}\r\nh2
+        { !important; margin: 0px; font-weight: normal; font-size: 20px; line-height:20px;
+        font-family: arial,verdana,helvetica; color:#000000;text-decoration:none;}\r\nh3
+        { !important; margin: 0px; font-weight: normal; font-size: 18px; line-height:20px;
+        font-family: arial,verdana,helvetica; color:#000000;text-decoration:none;}\r\nh4
+        { !important; margin: 0px; font-weight: normal; font-size: 18px; line-height:20px;
+        font-family: arial,verdana,helvetica; color:#000000;text-decoration:none;}\r\nh1
+        a, h2 a, h3 a, h4 a{color:#000000;text-decoration:none;}\r\np, div { font-size:
+        12px; line-height: 16px; font-family: arial,verdana,helvetica; color: #555;
+        margin: 0px; }\r\n.divP { font-size: 12px; line-height: 16px; font-family:
+        arial,verdana,helvetica; color: #555; margin: 0px; }\r\na { color: #0caad1;
+        text-decoration: none; }\r\n.signature{ font-weight:bold; color: #999999;}\r\n.easy{color:#999999;}\r\nimg
+        {display:block;}\r\n.headerFullBanner{width:600px;}\r\n.headerPaddedbanner{width:540px;}\r\n.imgBanner{width:540px;}\r\n.imgLeft{width:260px;}\r\n.imgRight{width:260px;}\r\n.imgDouble{width:260px;}\r\n.imgTriple{width:170px;}\r\n.imgCart{max-width:122px;}</style><!--Elvis
+        3.0 Framework-->\n<!--Background Table-->\n<table width=\"100%\" cellspacing=\"0\"
+        cellpadding=\"0\" border=\"0\" align=\"center\" id=\"nl_background\" style=\"background:
+        #ffffff;font-family:Arial, Helvetica, sans-serif;font-size:12px;margin:0px;\"><tbody><tr>\n<td>
+        \n        \t<!--email container-->\n            <table cellspacing=\"0\" cellpadding=\"0\"
+        border=\"0\" align=\"center\" width=\"600\"><tbody>\n<tr>\n<td width=\"600\">\n                    <!--Pre
+        header-->\n                       <table cellspacing=\"0\" cellpadding=\"0\"
+        border=\"0\" width=\"600\" id=\"nl_outerheader\"><tbody><tr>\n<td valign=\"middle\"
+        width=\"400\" align=\"left\" height=\"30\">\n                                  <div
+        class=\"editable\" style=\"font-size: 12px; line-height: 16px; font-family:
+        arial,verdana,helvetica; color: #555; margin: 0px;\">\n<p style=\"font-size:
+        12px; line-height: 16px; font-family: arial,verdana,helvetica; color: #555;
+        margin: 0px;\">Arct</p>\n</div>\n                                </td>\n                                <td
+        valign=\"middle\" width=\"200\" align=\"right\" height=\"30\">\n                                \t<p
+        style=\"font-size: 12px; line-height: 16px; font-family: arial,verdana,helvetica;
+        color: #555; margin: 0px;\"><a href=\"\" class=\"text_only show_online_link\"
+        style=\"color: #2890ab;text-decoration:none;\">View in browser</a></p>\n                                </td>\n                            </tr></tbody></table>\n<!--End
+        pre header-->\n</td>\n                </tr>\n<tr>\n<td width=\"600\">    \n                        <!--content
+        container-->\n                        <table cellspacing=\"0\" cellpadding=\"0\"
+        border=\"0\" width=\"600\" bgcolor=\"#FFFFFF\" id=\"nl_content\" style=\"background:
+        #2890ab;font-family:Arial, Helvetica, sans-serif;font-size:12px;margin:0px;\"><tbody>\n<tr>\n<td
+        width=\"600\">\n                                \t<!--Header-->\n                                \t<table
+        cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"600\" id=\"header\"><tbody
+        class=\"nl_column nl_header_column\" default_articles=\"banner\"><tr class=\"nl_row\"><td
+        class=\"nl_cell\" cid=\"c79\" title=\"\">\n<a href=\"http://www.arcticelvis.no\"
+        class=\"nl_wrapped_link image_wrap\" ae_link_id=\"67601\" style=\"color: #eccf04;text-decoration:none;\"><img
+        src=\"http://res.cloudinary.com/arcticelvis/image/upload/c_scale,w_600/v1351192682/xqqdk00lzpethjmfq9t2.jpg\"
+        class=\"headerFullBanner\" alt=\"Rorbu Confessions\" width=\"600\" height=\"326\"
+        style=\"display: block;width:600px;\"></a><table width=\"600\" cellspacing=\"0\"
+        cellpadding=\"0\" border=\"0\"><tbody>\n<tr></tr>\n<tr>\n<td width=\"600\"
+        height=\"30\"></td>\n\t</tr>\n</tbody></table>\n</td></tr></tbody></table>\n<!--End
+        header-->\n</td>\n                            </tr>\n<tr>\n<td width=\"600\">\n                                \t<table
+        width=\"600\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\"><tbody><tr>\n<td
+        width=\"30\"></td>\n                                            <td width=\"540\">\n                                            \t<table
+        cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"540\"><tbody class=\"nl_column
+        nl_article_column\" default_articles=\"article triple_article_with_images\"><tr
+        class=\"nl_row\" style=\"\"><td class=\"nl_cell\" cid=\"c80\" title=\"\"><table
+        width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody>\n<tr>\n<td
+        width=\"100%\" valign=\"top\" align=\"left\">\n                \t<div class=\"editable\"
+        style=\"font-size: 12px; line-height: 16px; font-family: arial,verdana,helvetica;
+        color: #555; margin: 0px;\"><p style=\"color: #ffffff;font-size:12px;line-height:16px;font-family:arial,verdana,helvetica;margin:0px;\">Welcome
+        Surly you have a name mister!!<br><br>You are now a very special person!</p></div>\n                </td>\n            </tr>\n<tr><td
+        width=\"100%\" class=\"nl_space\" height=\"40\"></td></tr>\n</tbody></table></td></tr></tbody></table>\n</td>\n                                            <td
+        width=\"30\"></td>\n                                       \t</tr></tbody></table>\n</td>\n                            </tr>\n<tr>\n<td
+        width=\"600\">\n                                \t<!--Footer-->\n                                \t<!--Header-->\n                                \t<table
+        cellpadding=\"0\" cellspacing=\"0\" border=\"0\" width=\"600\" id=\"footer\"><tbody
+        class=\"nl_column nl_footer_column\" default_articles=\"semi_advanced\"></tbody></table>\n<!--End
+        header--><!--End footer-->\n</td>\n                            </tr>\n</tbody></table>\n<!--End
+        content container-->\n</td>\n               \t</tr>\n<tr>\n<td width=\"600\">\n                       <!--Outer
+        footer--> \n                        <table cellspacing=\"0\" cellpadding=\"0\"
+        border=\"0\" width=\"600\" id=\"nl_outerfooter\"><tbody>\n<tr>\n<td width=\"600\"
+        height=\"15\"></td>\n                            </tr>\n<tr>\n<td width=\"600\"
+        align=\"center\" height=\"30\" valign=\"middle\">\n                                \t<p
+        style=\"font-size: 12px; line-height: 16px; font-family: arial,verdana,helvetica;
+        color: #555; margin: 0px;\"><a href=\"\" class=\"text_only unsubscribe_link\"
+        style=\"color: #2890ab;text-decoration:none;\">Unsubscribe from this newsletter</a></p>\n                                </td>\n                            </tr>\n<tr>\n<td
+        width=\"600\" height=\"5\"></td>\n                            </tr>\n<tr>\n<td
+        width=\"600\" align=\"center\">\n                                \t<div class=\"easy
+        editable\" style=\"font-size: 12px; line-height: 16px; font-family: arial,verdana,helvetica;
+        color: #555; margin: 0px;\"><p style=\"font-size: 12px; line-height: 16px;
+        font-family: arial,verdana,helvetica; color: #555; margin: 0px;\">This newsletter
+        is sent to you because you signed up to our mailinglist last christmas.</p></div>\n                                </td>\n                            </tr>\n<tr></tr>\n<tr>\n<td
+        width=\"600\" height=\"5\"></td>\n                            </tr>\n<tr>\n<td
+        width=\"600\" align=\"center\">\n\n\t\t\t\t\t\t\t\t\t\t\n                                \t<p
+        class=\"signature uneditable\" style=\"font-size: 12px; line-height: 16px;
+        font-family: arial,verdana,helvetica; color: #555; margin: 0px;font-weight:bold;\">\n\t\t\t\t\t\t\t\t\t\t</p>\n<p
+        style=\"font-size: 12px; line-height: 16px; font-family: arial,verdana,helvetica;
+        color: #555; margin: 0px;\">\n\t\t\t\t\t\t\t\t\t\t<a class=\"aehts\" rel=\"sys\"
+        href=\"http://www.arcticelvis.com?source=nl_snesquatter56\" style=\"color:
+        #2890ab;text-decoration:none;\">Powered by ArcticElvis</a>\n\t\t\t\t\t\t\t\t\t\t</p>\n                                  \t\t<p
+        class=\"easy\" style=\"font-size: 12px; line-height: 16px; font-family: arial,verdana,helvetica;
+        color: #555; margin: 0px;\"></p>\n<div class=\"editable\" style=\"font-size:
+        12px; line-height: 16px; font-family: arial,verdana,helvetica; color: #555;
+        margin: 0px;\">Global king of simple newsletters.</div>\n<p style=\"font-size:
+        12px; line-height: 16px; font-family: arial,verdana,helvetica; color: #555;
+        margin: 0px;\"></p>\n\t\t\t\t\t\t\t\t\t<p style=\"font-size: 12px; line-height:
+        16px; font-family: arial,verdana,helvetica; color: #555; margin: 0px;\"></p>\n                                </td>\n                            </tr>\n<tr>\n<td
+        width=\"600\" height=\"30\"></td>\n                            </tr>\n</tbody></table>\n<!--End
+        outer footer -->\n</td>\n                </tr>\n<tr>\n<td width=\"600\" height=\"30\"></td>\n                </tr>\n</tbody></table>\n</td>\n    </tr></tbody></table><!--End
+        Background Table--></body>\n      </html>"}}'
+    http_version: 
+  recorded_at: Wed, 08 Jan 2014 21:39:56 GMT
+recorded_with: VCR 2.8.0
