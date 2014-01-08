@@ -4,7 +4,9 @@ module ArcticElvis
 
     class << self
       def find(id)
-        response = ArcticElvis.request(:get, "events/#{id}", {})
+        response, status = ArcticElvis.request(:get, "events/#{id}", {})
+        raise RecordNotFoundError if status == 404
+
         event_messages = response["event"]["event_messages"]
         response["event"].delete("event_messages")
         event = self.new(response["event"])
@@ -22,7 +24,12 @@ module ArcticElvis
 
     def trigger(options={})
       raise InvalidOptionsError.new("no email given") unless options[:to]
-      response = ArcticElvis.request(:post, "events/#{id}/trigger", options)
+      response, status = ArcticElvis.request(:post, "events/#{id}/trigger", options)
+      raise RecordNotFoundError if status == 404
+      if status == 201
+        set_attributes(response["event_instance"]["event"])
+        return self
+      end
     end
   end
 end

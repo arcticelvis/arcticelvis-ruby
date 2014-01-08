@@ -12,7 +12,8 @@ module ArcticElvis
   class ArcticElvisError < StandardError; end
   class AuthenticationError < ArcticElvisError; end
   class InvalidOptionsError < ArcticElvisError; end
-
+  class RecordNotFoundError < ArcticElvisError; end
+  
   class << self
     def request(http_method, api_url, data)
       Request.new(http_method, api_url, data).perform

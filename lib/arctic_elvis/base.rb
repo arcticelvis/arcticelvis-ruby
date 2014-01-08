@@ -22,8 +22,8 @@ module ArcticElvis
 
     # Parses UNIX timestamps and creates Time objects.
     def parse_timestamps
-      @created_at = Time.at(created_at) if created_at
-      @updated_at = Time.at(updated_at) if updated_at
+      @created_at = DateTime.parse(created_at) if created_at
+      @updated_at = DateTime.parse(updated_at) if updated_at
     end
   end
 end

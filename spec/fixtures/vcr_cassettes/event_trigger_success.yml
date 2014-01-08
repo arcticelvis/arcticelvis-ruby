@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.arcticelvis.com/api/v2/events/177/trigger.json
+    body:
+      encoding: UTF-8
+      string: '{"to":"ch@skalar.no","payload":{"name":"Arctic"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Content-Type:
+      - application/json
+      Authorization:
+      - Token token=cd242fb288ddf6e501decb92b84ac0a4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 08 Jan 2014 20:50:51 GMT
+      Etag:
+      - '"cf914ee433791f30ea4a9685d6baab2d"'
+      Location:
+      - /api/v2/events.177
+      Status:
+      - 201 Created
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - c0e73b03db097fd334290bb286e88646
+      X-Runtime:
+      - '0.225595'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"event_instance":{"subscriber":{"id":202009,"email":"ch@skalar.no","first_name":"Christian","last_name":"","unsubscribed":false,"bounced":false,"tracked":true,"created_at":"2013-06-15T10:23:49Z","data":{},"lists":[{"id":616,"name":"All","created_at":"2013-12-17T01:32:32Z","subscriber_count":83},{"id":432,"name":"Skalar
+        AS","created_at":"2013-06-15T10:17:01Z","subscriber_count":15}]},"event":{"id":177,"name":"New
+        user","state":"active","created_at":"2014-01-08T18:59:15Z","updated_at":"2014-01-08T19:00:11Z","event_messages":[{"id":235,"subject":"Welcome","created_at":"2014-01-08T19:00:02Z","updated_at":"2014-01-08T20:39:14Z","state":"active","preview":false}]}}}'
+    http_version: 
+  recorded_at: Wed, 08 Jan 2014 20:50:51 GMT
+recorded_with: VCR 2.8.0
