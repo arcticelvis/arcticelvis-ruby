@@ -30,4 +30,23 @@ describe ArcticElvis::Event do
     end
     
   end
+
+  describe ".trigger" do
+    it "makes a POST request to the api-endpoint to fetch a specific event" do
+      params = {
+        email: 'ch@skalar.no',
+        payload: {
+          name: "Arctic"
+        }
+      }
+      ArcticElvis.should_receive(:request).with(:post, "events/1/trigger", params).and_return("event_instance" => {})
+      event = ArcticElvis::Event.new(id: '1')
+      event.trigger({
+        to: 'ch@skalar.no',
+        payload: {
+          name: "Arctic"
+        }
+      })
+    end
+  end
 end

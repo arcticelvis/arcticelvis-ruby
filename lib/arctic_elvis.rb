@@ -11,6 +11,7 @@ module ArcticElvis
 
   class ArcticElvisError < StandardError; end
   class AuthenticationError < ArcticElvisError; end
+  class InvalidOptionsError < ArcticElvisError; end
 
   class << self
     def request(http_method, api_url, data)
