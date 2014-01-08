@@ -30,9 +30,12 @@ module ArcticElvis
       end
       
       if response.body.to_s.include? 'Access denied'
-        raise ArcticElvis::AuthenticationError.new("Invalid credentials, is your api key correct?")
+        raise ArcticElvis::AuthenticationError.new("Invalid credentials, is your API KEY correct?")
       else
         result = JSON.parse(response.body)
+        if result["error"] && result["error"]["id"] == 4001
+          raise ArcticElvis::AuthenticationError.new("Invalid API KEY")
+        end
       end
 
       return result, response.status.to_i
