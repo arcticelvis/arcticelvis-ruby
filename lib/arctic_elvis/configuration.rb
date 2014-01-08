@@ -2,6 +2,7 @@ module ArcticElvis
   module Configuration
     VALID_CONFIG_KEYS = [:api_key].freeze
     DEFAULT_API_KEY = nil
+    API_HOST = "http://arcticelvis.apiary.io"
 
     attr_accessor *VALID_CONFIG_KEYS
  

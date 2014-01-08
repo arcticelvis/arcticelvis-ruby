@@ -28,6 +28,43 @@ ArcticElvis.configure do |config|
 end
 ```
 
+### Events
+Events let you trigger event emails. Learn more [link_to_todo]()
+
+#### Trigger
+
+```
+event = ArcticElvis::Event.find("signup")
+
+event.trigger({
+	to: 'Mr Success <email@example.com>',
+	bcc: 'bcc@example.com',	
+	payload: {
+		name: "Bob roy",
+		personal_greeting: "Thanks for the signup Bob!",
+		favorite_colors: ['red', 'blue']
+	}
+})
+
+	#	response =>
+	#	{
+	#		status: "success",	
+	#		event: {
+	#			id: '123',
+	#			handel: 'signup',
+	#			triggered_last_30_days: 34	
+	#		}
+	#	
+	#	}
+
+```
+
+Options:
+	
+	to: email
+	bss: email
+	force: boolean, defaults to false. If true it will send to unsubscribed
+
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/arctic_elvis/fork )
