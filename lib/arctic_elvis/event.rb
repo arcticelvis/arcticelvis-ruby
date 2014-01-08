@@ -21,11 +21,8 @@ module ArcticElvis
     end
 
     def trigger(options={})
-      raise InvalidOptionsError.new("to is required") unless options[:to]
-      post_data = {}
-      post_data[:email] = options[:to]
-      post_data[:payload] = options[:payload]
-      response = ArcticElvis.request(:post, "events/#{id}/trigger", post_data)
+      raise InvalidOptionsError.new("no email given") unless options[:to]
+      response = ArcticElvis.request(:post, "events/#{id}/trigger", options)
     end
   end
 end

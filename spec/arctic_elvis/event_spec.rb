@@ -34,7 +34,7 @@ describe ArcticElvis::Event do
   describe ".trigger" do
     it "makes a POST request to the api-endpoint to fetch a specific event" do
       params = {
-        email: 'ch@skalar.no',
+        to: 'ch@skalar.no',
         payload: {
           name: "Arctic"
         }
