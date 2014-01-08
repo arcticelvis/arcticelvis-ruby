@@ -1,4 +1,4 @@
-module ArcticElvis
+module Arcticelvis
   class Base
     
     attr_accessor :created_at, :updated_at

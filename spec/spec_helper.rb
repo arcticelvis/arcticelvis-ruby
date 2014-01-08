@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 
-require 'arctic_elvis'
+require 'arcticelvis'
 require 'vcr'
 
 RSpec.configure do |config|

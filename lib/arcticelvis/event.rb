@@ -1,10 +1,10 @@
-module ArcticElvis
+module Arcticelvis
   class Event < Base
     attr_accessor :id, :name, :event_messages
 
     class << self
       def find(id)
-        response, status = ArcticElvis.request(:get, "events/#{id}", {})
+        response, status = Arcticelvis.request(:get, "events/#{id}", {})
         raise RecordNotFoundError if status == 404
 
         event_messages = response["event"]["event_messages"]
@@ -14,7 +14,7 @@ module ArcticElvis
         if event_messages
           res = []
           event_messages.each do |event_message|
-            res << ArcticElvis::EventMessage.new(event_message)
+            res << Arcticelvis::EventMessage.new(event_message)
           end
         end
         event.event_messages = res if res
@@ -24,7 +24,7 @@ module ArcticElvis
 
     def trigger(options={})
       raise InvalidOptionsError.new("no email given") unless options[:to]
-      response, status = ArcticElvis.request(:post, "events/#{id}/trigger", options)
+      response, status = Arcticelvis.request(:post, "events/#{id}/trigger", options)
       raise RecordNotFoundError if status == 404
       if status == 201
         set_attributes(response["event_instance"]["event"])

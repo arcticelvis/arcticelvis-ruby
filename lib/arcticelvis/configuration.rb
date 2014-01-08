@@ -1,4 +1,4 @@
-module ArcticElvis
+module Arcticelvis
   module Configuration
     VALID_CONFIG_KEYS = [:api_key].freeze
     DEFAULT_API_KEY = nil

@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'arctic_elvis/version'
+require 'arcticelvis/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "arctic_elvis"
-  spec.version       = ArcticElvis::VERSION
+  spec.name          = "arcticelvis"
+  spec.version       = Arcticelvis::VERSION
   spec.authors       = ["Christian Hager"]
   spec.email         = ["persson.hager@gmail.com"]
   spec.summary       = %q{A client for the ArcticElvis API}
