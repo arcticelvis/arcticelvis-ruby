@@ -34,11 +34,10 @@ Events let you trigger event emails. Learn more [link_to_todo]()
 #### Trigger
 
 ```
-event = ArcticElvis::Event.find("signup")
+event = ArcticElvis::Event.find("EVENT_ID")
 
 event.trigger({
-	to: 'Mr Success <email@example.com>',
-	bcc: 'bcc@example.com',	
+	to: 'email@example.com',
 	payload: {
 		name: "Bob roy",
 		personal_greeting: "Thanks for the signup Bob!",
@@ -46,24 +45,39 @@ event.trigger({
 	}
 })
 
-	#	response =>
-	#	{
-	#		status: "success",	
-	#		event: {
-	#			id: '123',
-	#			handel: 'signup',
-	#			triggered_last_30_days: 34	
-	#		}
-	#	
-	#	}
+```
+
+#### Preview event messages
+TODO: make something like letter opener
+
+```
+event = ArcticElvis::Event.find("EVENT_ID")
+
+event_message = event.event_messages[0]
+
+event_message.preview({
+	payload: {
+		name: "ArcticElvis",
+		age: 98
+	}
+})
+
+	#=> (simplified preview output)
+		{
+		   "event_message" => {
+           	    "id" => 714,
+	            "subject" => "Hello from mr event",
+		        "created_at" => "2014-01-08T06:38:52Z",
+         	    "updated_at" => "2014-01-08T06:38:52Z",
+           	 	"state" => "paused",
+	            "preview" => "<html>…Hello ArcticElvis, you are 98 years old. And still kicking it!?…</html>"
+		    }
+		}
+
 
 ```
 
-Options:
-	
-	to: email
-	bss: email
-	force: boolean, defaults to false. If true it will send to unsubscribed
+
 
 ## Contributing
 
