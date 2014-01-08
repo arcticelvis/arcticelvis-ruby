@@ -83,7 +83,7 @@ you can also lookup an event and loop through its messages
 
 ```
 event = Arcticelvis::Event.find("EVENT_ID")
-event_message = event.event_messages[0]
+event_message = event.event_messages.first
 event_message.preview({
 	payload: {
 		name: "ArcticElvis",
@@ -98,7 +98,7 @@ event_message.preview({
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/arctic_elvis/fork )
+1. Fork it ( http://github.com/arcticelvis/arcticelvis-ruby/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
