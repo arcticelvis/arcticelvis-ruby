@@ -1,6 +1,8 @@
 # ArcticElvis
 
-ArcticElvis is a fisherman from a long line of fishermen from the upmost arctic parts of Norway. He can help you get more fish - aka sell more. This is a ruby client for `api.arcticelvis.com`.
+ArcticElvis is a fisherman from a long line of fishermen in the upmost arctic parts of Norway. He can help you get more fish - aka sell more. This is a ruby client for `api.arcticelvis.com`.
+
+The API is documentet here: [http://docs.arcticelvis.apiary.io/](http://docs.arcticelvis.apiary.io/) (work in progress)
 
 ## Installation
 
@@ -29,7 +31,7 @@ end
 ```
 
 ### Events
-Events let you trigger event emails. Learn more [link_to_todo]()
+Events let you trigger event emails.
 
 #### Trigger
 
@@ -62,15 +64,15 @@ event_message.preview({
 	}
 })
 
-	#=> (simplified preview output)
+	#=> simplified preview output
 		{
 		   "event_message" => {
            	    "id" => 714,
-	            "subject" => "Hello from mr event",
+	            "subject" => "Welome!",
 		        "created_at" => "2014-01-08T06:38:52Z",
          	    "updated_at" => "2014-01-08T06:38:52Z",
            	 	"state" => "paused",
-	            "preview" => "<html>…Hello ArcticElvis, you are 98 years old. And still kicking it!?…</html>"
+	            "preview" => "<html>…Thanks for the signup ArcticElvis, you are 98 years old. Really!?…</html>"
 		    }
 		}
 
