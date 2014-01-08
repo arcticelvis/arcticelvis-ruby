@@ -8,7 +8,7 @@ The API is documentet here: [http://docs.arcticelvis.apiary.io/](http://docs.arc
 
 Add this line to your application's Gemfile:
 
-    gem 'arctic_elvis'
+    gem 'arcticelvis'
 
 And then execute:
 
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install arctic_elvis
+    $ gem install arcticelvis
 
 ## Usage
 
@@ -25,7 +25,7 @@ Or install it yourself as:
 Setup the API key. It can be found under the settings meny in the app.
 
 ```
-ArcticElvis.configure do |config|
+Arcticelvis.configure do |config|
   config.api_key = 'YOUR_API_KEY'
 end
 ```
@@ -36,7 +36,7 @@ Events let you trigger event emails.
 #### Trigger
 
 ```
-event = ArcticElvis::Event.find("EVENT_ID")
+event = Arcticelvis::Event.new(id: YOUR_EVENT_ID)
 
 event.trigger({
 	to: 'email@example.com',
@@ -49,14 +49,24 @@ event.trigger({
 
 ```
 
+#### Find
+Will lookup an event and all its messages
+
+```
+event = Arcticelvis::Event.find("EVENT_ID")
+event.name #=> "New Signup"
+event_message = event.event_messages[0]
+event_message.state #=> "paused"
+
+```
+
+
 #### Preview event messages
 TODO: make something like letter opener
 
 ```
-event = ArcticElvis::Event.find("EVENT_ID")
 
-event_message = event.event_messages[0]
-
+event_message = Arcticelvis::EventMessage.new(id: EVENT_MESSAGE_ID, event_id: EVENT_ID)
 event_message.preview({
 	payload: {
 		name: "ArcticElvis",
@@ -64,20 +74,25 @@ event_message.preview({
 	}
 })
 
-	#=> simplified preview output
-		{
-		   "event_message" => {
-           	    "id" => 714,
-	            "subject" => "Welome!",
-		        "created_at" => "2014-01-08T06:38:52Z",
-         	    "updated_at" => "2014-01-08T06:38:52Z",
-           	 	"state" => "paused",
-	            "preview" => "<html>…Thanks for the signup ArcticElvis, you are 98 years old. Really!?…</html>"
-		    }
-		}
-
+	#simplified preview output =>
+		"<html>…Thanks for the signup ArcticElvis, you are 98 years old. Really!?…</html>
 
 ```
+
+you can also lookup an event and loop through its messages
+
+```
+event = Arcticelvis::Event.find("EVENT_ID")
+event_message = event.event_messages[0]
+event_message.preview({
+	payload: {
+		name: "ArcticElvis",
+		age: 98
+	}
+})
+```
+
+
 
 
 
